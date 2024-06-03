@@ -13,8 +13,9 @@ import { Head } from '@inertiajs/vue3';
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg text-center">
                     <div class="p-6 text-gray-900">You're logged in!</div>
+                    <div class="p-6 text-gray-900">Search for a user to start chating with him!</div>
                 </div>
             </div>
         </div>
