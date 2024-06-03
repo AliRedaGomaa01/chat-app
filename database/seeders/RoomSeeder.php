@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Room;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class RoomSeeder extends Seeder
 {
@@ -12,6 +13,19 @@ class RoomSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $rooms = [];
+
+        foreach (range(1, 4) as $key => $value) 
+        {
+            $rooms[] = [
+                'name' => 'chat room '. $value,
+                'created_by' => rand(1, 4),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ];
+        }
+
+        Room::insert($rooms);
+
     }
 }

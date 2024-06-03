@@ -13,31 +13,19 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        $users = [
-            [
-                'name' => 'a',
-                'email' => 'a@a.a',
-                'password' => 'a',
-            ],
-            [
-                'name' => 'b',
-                'email' => 'b@b.b',
-                'password' => 'b',
-            ],
-            [
-                'name' => 'c',
-                'email' => 'c@c.c',
-                'password' => 'c',
-            ],
-            [
-                'name' => 'd',
-                'email' => 'd@d.d',
-                'password' => 'd',
-            ],
-        ];
 
-        foreach ( $users as $key => $user ) {
-            User::create( $user );
+        $users = [];
+        foreach ( [ 'a' , 'b' , 'c' , 'd'] as $key => $value ) {
+            $users[] = [
+                "name" => "$value",
+                "email" => "$value@$value.$value",
+                "password" => bcrypt("$value"),
+                "created_at" => now(),
+                "updated_at" => now(),
+            ];
         }
+
+
+        User::insert( $users );
     }
 }
