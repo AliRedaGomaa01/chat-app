@@ -19,7 +19,7 @@ class RoomSeeder extends Seeder
         {
             $rooms[] = [
                 'name' => 'chat room '. $value,
-                'created_by' => rand(1, 4),
+                'created_by' => $value,
                 'created_at' => now(),
                 'updated_at' => now(),
             ];

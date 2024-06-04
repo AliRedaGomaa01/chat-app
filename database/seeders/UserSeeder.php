@@ -15,7 +15,9 @@ class UserSeeder extends Seeder
     {
 
         $users = [];
+
         foreach ( [ 'a' , 'b' , 'c' , 'd'] as $key => $value ) {
+
             $users[] = [
                 "name" => "$value",
                 "email" => "$value@$value.$value",
@@ -23,8 +25,8 @@ class UserSeeder extends Seeder
                 "created_at" => now(),
                 "updated_at" => now(),
             ];
-        }
 
+        }
 
         User::insert( $users );
     }
