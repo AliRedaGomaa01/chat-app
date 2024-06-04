@@ -2,15 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
-  *::-webkit-scrollbar {
+@layer base {
+  .hide-scroll::-webkit-scrollbar {
     display: none;
   }
   
-  * {
+  .hide-scroll {
     scrollbar-width: none; 
   }
-} */
+}
 
 @layer components {
   .primary-btn {

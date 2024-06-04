@@ -188,7 +188,7 @@ const showingNavigationDropdown = ref(false);
       </div>
 
       <!-- Page Content -->
-      <main class="align-self-center grid place-items-center my-10">
+      <main class="align-self-center grid place-items-center my-10 overflow-scroll hide-scroll">
         <slot />
       </main>
 
