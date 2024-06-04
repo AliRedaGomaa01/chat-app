@@ -12,7 +12,7 @@ const showingNavigationDropdown = ref(false);
 
 <template>
   <div>
-    <div class="min-h-screen bg-gray-100 grid grid-cols-1 h-[100vh] items-between">
+    <div class="bg-gray-100 grid grid-cols-1 min-h-[100vh] items-between">
       <div class="align-self-start">
         <nav class="bg-white border-b border-gray-100">
           <!-- Primary Navigation Menu -->
@@ -21,7 +21,7 @@ const showingNavigationDropdown = ref(false);
               <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                  <Link :href="route('dashboard')">
+                  <Link :href="route('index')">
                     <ApplicationLogo
                       class="block h-9 w-auto fill-current text-gray-800"
                     />
@@ -35,6 +35,12 @@ const showingNavigationDropdown = ref(false);
                     :active="route().current('dashboard')"
                   >
                     Dashboard
+                  </NavLink>
+                  <NavLink
+                    :href="route('rooms.index')"
+                    :active="route().current('rooms.index')"
+                  >
+                    My Rooms
                   </NavLink>
                 </div>
               </div>
@@ -138,6 +144,12 @@ const showingNavigationDropdown = ref(false);
               >
                 Dashboard
               </ResponsiveNavLink>
+              <ResponsiveNavLink
+                :href="route('rooms.index')"
+                :active="route().current('rooms.index')"
+              >
+                My Rooms
+              </ResponsiveNavLink>
             </div>
 
             <!-- Responsive Settings Options -->
@@ -176,7 +188,7 @@ const showingNavigationDropdown = ref(false);
       </div>
 
       <!-- Page Content -->
-      <main class="align-self-center grid justify-items-center items-center">
+      <main class="align-self-center grid place-items-center my-10">
         <slot />
       </main>
 

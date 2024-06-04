@@ -33,7 +33,7 @@ function handleImageError() {
             class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white"
         >
             <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl grid grid-cols-1 h-[100vh] text-center items-center">
-                <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3 align-self-start">
+                <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3 align-self-start bg-white px-10 rounded-lg">
                     <div class="flex lg:justify-center lg:col-start-2">
                         <svg
                             class="h-12 w-auto text-white lg:h-16 lg:text-[#FF2D20]"
@@ -75,8 +75,8 @@ function handleImageError() {
                     </nav>
                 </header>
 
-                <main class="mt-6 align-self-center ">
-                    <div class="text-6xl">
+                <main class="mt-6 align-self-center bg-white p-5 py-10 rounded-lg text-black font-bold">
+                    <div class="text-3xl">
                         Welcome to my chat web application
                     </div>
                     <br>
@@ -84,10 +84,18 @@ function handleImageError() {
                     <div class="text-3xl"> You can login or register to test features of our app</div>
                 </main>
 
-                <footer class="py-16 text-center text-sm text-black dark:text-white/70 align-self-end">
-                    Made by Ali Hussein
+                <footer class="text-center text-sm text-black dark:text-white/70 grid " >
+                    <div class="bg-white p-5 align-self-end text-black font-bold text-xl">
+                        Made by Ali Hussein
+                    </div>
                 </footer>
             </div>
         </div>
     </div>
 </template>
+
+<style scoped>
+    a {
+        @apply border border-2 border-red-500 m-2 hover:bg-red-50
+    }
+</style>
